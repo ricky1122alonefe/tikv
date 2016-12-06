@@ -261,6 +261,7 @@ fn respond(resp: Response, on_resp: OnResponse) {
     let mut resp_msg = Message::new();
     resp_msg.set_msg_type(MessageType::CopResp);
     resp_msg.set_cop_resp(resp);
+     println("hello rush!!!" );
     on_resp.call_box((resp_msg,));
 }
 

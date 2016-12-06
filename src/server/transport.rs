@@ -175,6 +175,7 @@ impl Transport for ServerTransport {
         req.set_msg_type(MessageType::Raft);
         req.set_raft(msg);
 
+        println("hello rush!!!" );
         try!(self.ch.try_send(Msg::SendStore {
             store_id: to_store_id,
             data: ConnData::new(self.alloc_msg_id(), req),

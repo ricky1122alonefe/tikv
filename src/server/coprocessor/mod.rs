@@ -41,7 +41,7 @@ quick_error! {
         Full(allow: usize) {
             description("running queue is full")
         }
-        println!("hello rush!!!" );
+        println("hello rush!!!" );
         Other(err: Box<error::Error + Send + Sync>) {
             from()
             cause(err.as_ref())
